@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - SAE</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/e1826cb6ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="Apoyo_grafico/videoropa.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="icon__menu" id="btn_open">
+            <i class="fa-solid fa-list"></i>
+        </div>
+
+        <div class="containe">
+            <nav id="carrito">
+                <i class="fa-solid fa-cart-shopping">
+                    <div class="buy-card">
+                        <ul class="nav-card">
+                            <li>imagen</li>
+                            <li>nombre</li>
+                            <li>precio</li>
+                            <li>cantidad</li>
+                            <li></li>
+                        </ul>
+                        <div class="listas">
+                     
+                        </div>
+                        <Button id="vaciar">VACIAR CARRITO</Button>
+                    </div>
+                </i>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Menú lateral -->
+    <div class="menu__side" id="menu_side">
+        <div class="name__page">
+            <h4>SAE</h4>
+            <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="option__menu">
+            <a href="Principal.html">
+                <div class="option">
+                    <i class="fa-solid fa-home"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+            <a href="Productos.html" class="select">
+                <div class="option">
+                    <i class="fa-solid fa-tag"></i>
+                    <h4>Productos</h4>
+                </div>
+            </a>
+            <a href="Novedades.html">
+                <div class="option">
+                    <i class="fa-solid fa-star"></i>
+                    <h4>Novedades</h4>
+                </div>
+            </a>
+            <a href="Contacto.html">
+                <div class="option">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Contactos</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="container">
+            <div class="intro">
+                <h2>Nuestros Productos</h2>
+                <p>Explora nuestra amplia gama de productos. Desde ropa casual hasta prendas de temporada, tenemos algo
+                    para cada estilo y ocasión. ¡Descubre tu próxima prenda favorita hoy!</p>
+            </div>
+
+            <!-- Galería de productos -->
+            <div class="product-grid" id="lista-prendas">
+
+                <div class="product-card">
+                    <img src="Apoyo_grafico/chaqueta.jpeg" alt="Producto 1">
+                    <div class="info">
+                        <h3>Chaqueta de Cuero</h3>
+                        <div class="precio">
+                            <p>$89.99</p>
+                        </div>
+                        <p>Chaqueta de cuero auténtico, ideal para un look urbano.</p>
+                        <button class="agregar-prenda" data-id="1">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Apoyo_grafico/sueter.jpeg" alt="Producto 2">
+                    <div>
+                        <h3>Suéter de Lana</h3>
+                        <div class="precio">
+                            <p>$59.99</p>
+                        </div>
+                        <p>Suéter cálido y cómodo, perfecto para el otoño.</p>
+                        <button class="agregar-prenda" data-id="2">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Apoyo_grafico/vestido.jpeg" alt="Producto 3">
+                    <div>
+                        <h3>Vestido Floral</h3>
+                        <div class="precio">
+                            <p>$49.99</p>
+                        </div>
+                        <p>Vestido elegante con estampado floral, ideal para cualquier ocasión.</p>
+                        <button class="agregar-prenda" data-id="3">Agregar al carrito</button>
+                    </div>
+                </div>
+                <!-- Puedes añadir más productos aquí -->
+            </div>
+        </div>
+    </main>
+
+    <script src="Script.js"></script>
+
+</body>
+
+</html>

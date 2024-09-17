@@ -1,0 +1,428 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif !important;
+    margin-left: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background: rgb(255, 251, 251);
+}
+
+/* Video de fondo */
+#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+/* Ajuste para el botón de registro */
+.register-box {
+    position: absolute;
+    top: 50px;
+    /* Incrementado para mayor espacio */
+    right: 110px;
+    /* Incrementado para mayor espacio */
+    z-index: 1000;
+    /* Asegura que esté por encima del menú lateral y otros elementos */
+}
+
+.btn-register {
+    padding: 20px 30px;
+    background-color: transparent; /* Hacer el fondo transparente */
+    color: white;
+   
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 300ms, color 300ms; /* Añadir transición para un efecto suave */
+}
+
+.btn-register:hover {
+    
+    color: white; /* Mantener el color del texto */
+}
+
+
+/* Menú lateral e ícono de menú */
+.icon__menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(60px);
+    /* Ajustado para no superponerse con el botón */
+    z-index: 999;
+    /* Un nivel debajo del botón */
+}
+
+.icon__menu i {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+}
+
+.menu__side {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.name__page {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.option__menu {
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.option__menu a {
+    color: #ffffffb2;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.option__menu a:hover {
+    color: white;
+}
+
+.option__menu .option {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.option__menu .option i {
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.9;
+}
+
+.option__menu .option h4 {
+    font-weight: 300;
+    color: white;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+a.select {
+    color: white;
+}
+
+.select:before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/* Clases para el JS */
+.body_move {
+    margin-left: 250px;
+}
+
+.menu__side_move {
+    width: 250px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 80px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 100;
+    text-align: center;
+    font-size: 28px;
+    max-width: 800px;
+    margin: 80px auto;
+    border-radius: 10px;
+}
+
+
+/* Imagen dentro del contenedor */
+.image img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid white;
+}
+
+/* Ajustes de tipografía y alineación */
+.intro h2 {
+    font-family: "Bodoni Moda SC", serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.intro p {
+    font-family: "Bodoni Moda SC", serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: rgb(255, 255, 255);
+    
+}
+
+/* Estilo para la galería de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para los elementos de productos */
+.product-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    transition: background 300ms ease, transform 300ms ease;
+}
+
+.product-card:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    color: black;
+}
+
+.product-card p {
+    margin: 5px 0;
+    color: black;
+}
+
+.product-card p:last-of-type {
+    color: #777;
+}
+
+/* Formulario de Registro */
+.register-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.register-form h2 {
+    margin-top: 0;
+    color: black;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+
+.register-form input[type="submit"] {
+    background-color: #ffae00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.register-form input[type="submit"]:hover {
+    background-color: #ffae00;
+}
+
+/* Estilos para el botón de registro en dispositivos móviles */
+@media (max-width: 600px) {
+    .register-box {
+        margin-right: 10px;
+    }
+
+    .btn-register {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/*carrito de compras */
+
+.nav-card {
+    display: none;
+}
+
+.containe nav button {
+
+    display: none;
+}
+
+.containe nav i:hover>.buy-card {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    right: 0;
+    background-color: rgba(173, 172, 172, 0.3); 
+
+}
+
+.nav-card li{
+
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.containe nav i:hover .nav-card {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px 0 8px;
+    border-bottom: solid #e1e1e1;
+    padding: 0; /* Elimina el espaciado adicional */
+}
+ 
+.containe nav i:hover .buy-card > button{
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+.containe nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px; 
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.containe nav i {
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 1200px; /* Ajusta la distancia desde la parte izquierda */
+    font-size: 20px; /* Tamaño del ícono */
+    cursor: pointer;
+}
+
+/* acomodar los elementos de nuestro carrito*/
+
+.listas div{
+    display: none;
+    text-align: center;
+    padding: 10px 0 0;
+    border-top: solid thin gray;
+}
+
+.containe nav i:hover .buy-card > .listas div{
+    display: flex;
+}
+
+.listas img{
+    width: 80px;
+}
+
+.listas p{
+    width: 100px;
+    font-size: 15px;
+}
+
+.listas p:nth-child(4){
+    padding-left: 40px;
+}
+
+.listas p:last-child span{
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+/* novedades  */
+.news-item {
+    position: relative;
+    width: 100%; /* O establece un ancho fijo, por ejemplo, 300px */
+    height: auto; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que pueda desbordarse */
+    text-align: center; /* Centra la imagen y el contenido */
+}
+
+.news-item img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    transform: scale(0.6); /* Aplica la escala */
+    display: block;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    border-radius: 5px;
+    transform-origin: center; /* Escala desde el centro de la imagen */
+    margin-top: 0px;
+}

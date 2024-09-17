@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Ropa</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/e1826cb6ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="Apoyo_grafico/videoropa.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="icon__menu" id="btn_open">
+            <i class="fa-solid fa-list"></i>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div class="menu__side" id="menu_side">
+        <div class="name__page">
+            <h4>SAE</h4>
+            <i class="fa-solid fa-hippo"></i>
+        </div>
+
+        <div class="option__menu">
+            <a href="Principal.html" class="select">
+                <div class="option">
+                    <i class="fa-solid fa-home"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+            <a href="Productos.html">
+                <div class="option">
+                    <i class="fa-solid fa-tag"></i>
+                    <h4>Productos</h4>
+                </div>
+            </a>
+            <a href="Novedades.html">
+                <div class="option">
+                    <i class="fa-solid fa-star"></i>
+                    <h4>Novedades</h4>
+                </div>
+            </a>
+            <a href="Contacto.html">
+                <div class="option">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Contactos</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div class="container">
+        <div class="register-form">
+            <h2>Formulario de Registro</h2>
+            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="username">Nombre de Usuario:</label><br>
+                <input type="text" id="username" name="username" pattern="^\S+$" title="No se permiten espacios" required><br><br>
+
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+
+                <input type="submit" value="Registrar">
+            </form>
+
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nombre = htmlspecialchars($_POST['nombre']);
+                $username = htmlspecialchars($_POST['username']);
+                $email = htmlspecialchars($_POST['email']);
+                $telefono = htmlspecialchars($_POST['telefono']);
+                $direccion = htmlspecialchars($_POST['direccion']);
+
+                echo "<h2>Gracias, $nombre. Tu registro ha sido exitoso.</h2>";
+            }
+            ?>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+
+</body>
+
+</html>
